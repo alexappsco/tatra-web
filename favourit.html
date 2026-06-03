@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المفضلة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Almarai', sans-serif; }
+    :root { --main: #391462; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+   <div class="bg-gray-50 border-b border-gray-100 py-2 text-xs text-gray-500">
+  <div class="container mx-auto px-4 flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-0">
+
+    <!-- left -->
+    <div class="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+      <span class="flex items-center gap-1">
+        <img src="imgs/phone.svg" class="h-4 w-auto" />
+        +966556754472
+      </span>
+
+      <span class="flex items-center gap-1">
+        <img src="imgs/mail.svg" class="h-4 w-auto" />
+        Support@ttra.sa
+      </span>
+    </div>
+
+    <!-- right -->
+    <div class="flex flex-wrap gap-3 items-center justify-center lg:justify-end">
+
+      <span class="flex items-center gap-1">
+        <img src="imgs/arab.svg" class="h-4 w-auto" />
+        العربية - ر.س
+      </span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>المفضلة</span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>سياسة الاستبدال أو الاسترجاع</span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>مكتبتي</span>
+
+    </div>
+
+  </div>
+</div>
+
+<header class="bg-white shadow-sm p-4">
+  <div class="container mx-auto flex flex-wrap items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <img src="./imgs/logo.png" class="w-28 md:w-32 h-auto object-contain" />
+
+    <!-- Search -->
+    <div class="w-full md:flex-1 md:max-w-lg order-3 md:order-none">
+      <div class="relative">
+        <input
+          class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 px-4 text-right"
+          placeholder="ابحث عما تريد"
+        />
+        <span class="absolute left-3 top-4 text-gray-400"><img src="imgs/serach.svg" class="h-4 w-4 " /></span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4 md:gap-6">
+
+      <!-- login -->
+      <div class="flex items-center gap-2">
+        <span class="text-xl md:text-2xl text-gray-400"><img src="imgs/account.svg" class="h-6 w-6" /></span>
+        <div class="text-sm text-right hidden sm:block">
+          <p class="text-xs text-gray-400">مرحباً بك</p>
+          <p class="font-bold text-[var(--main)]">تسجيل دخول</p>
+        </div>
+      </div>
+
+      <!-- cart -->
+      <div class="flex items-center gap-2">
+        <div class="relative">
+          <span class="text-xl md:text-2xl"><img src="imgs/cart.svg" class="h-6 w-6" /></span>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+            2
+          </span>
+        </div>
+
+        <div class="text-sm text-right hidden sm:block">
+          <p class="text-xs text-gray-400">سلة المشتريات</p>
+          <p class="font-bold text-[var(--main)]">1,200 ر.س</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+<div class="w-full bg-[#391462] py-3">
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-16 flex gap-6 text-white text-sm font-medium justify-start">
+    <a href="#" class="hover:underline">مترجمات ▾</a>
+    <a href="#" class="hover:underline">اداره اعمال ▾</a>
+    <a href="#" class="hover:underline">رعب ▾</a>
+    <a href="#" class="hover:underline">سياسه ▾</a>
+    <a href="#" class="hover:underline">رومانسيه ▾</a>
+  </div>
+</div>
+<header
+  class="h-12 bg-white border border-gray-200 rounded-md px-6 flex items-center justify-start container mx-auto p-6 my-4 "
+>
+  <div class="flex items-center gap-4 text-sm text-gray-500">
+ <div
+      class="relative w-8 h-8 flex items-center justify-center bg-white"
+    >
+   
+    <img src="./imgs/home.svg" class="w-4 h-4 " alt="قلب" />
+     <img src="./imgs/row.svg" class=" " alt="قلب" />
+    </div>
+    <span class="font-medium text-gray-600">
+      المفضلة
+    </span>
+
+   
+
+  </div>
+</header>
+  <main class="container mx-auto p-6 flex flex-row-reverse gap-8">
+   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 items-start">
+        <div class="relative bg-white rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center text-center hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition">
+    
+    <div class="absolute top-3 left-3 z-10 bg-white p-2 rounded-full shadow-md cursor-pointer hover:bg-gray-50 transition">
+        <svg class="w-5 h-5 text-gray-400 hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+        </svg>
+    </div>
+
+    <img src="./imgs/book.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+    
+    <div class="text-yellow-400 text-xs mb-2 flex justify-center gap-2">
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+    </div>
+    
+    <h3 class="font-bold text-sm md:text-base text-gray-800 mb-1">الحكم هو الموت</h3>
+    <p class="text-gray-500 text-xs md:text-sm mb-4">أنتوني هورويتس</p>
+    
+    <div class="mt-auto w-full flex items-center rounded-lg overflow-hidden bg-[#F1F5F9]">
+        <span class="flex-1 text-right font-bold text-[var(--main)] text-sm py-3 pr-2">23 د.ك</span>
+        
+        <button class="bg-[var(--main)] text-white p-3 h-full flex items-center"
+        style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 12% 50%); transform: scaleX(-1);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        </button>
+    </div>
+    </div>
+      <div class="relative bg-white rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center text-center hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition">
+    
+    <div class="absolute top-3 left-3 z-10 bg-white p-2 rounded-full shadow-md cursor-pointer hover:bg-gray-50 transition">
+        <svg class="w-5 h-5 text-gray-400 hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+        </svg>
+    </div>
+
+    <img src="./imgs/book.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+    
+    <div class="text-yellow-400 text-xs mb-2 flex justify-center gap-2">
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+    </div>
+    
+    <h3 class="font-bold text-sm md:text-base text-gray-800 mb-1">الحكم هو الموت</h3>
+    <p class="text-gray-500 text-xs md:text-sm mb-4">أنتوني هورويتس</p>
+    
+    <div class="mt-auto w-full flex items-center rounded-lg overflow-hidden bg-[#F1F5F9]">
+        <span class="flex-1 text-right font-bold text-[var(--main)] text-sm py-3 pr-2">23 د.ك</span>
+        
+        <button class="bg-[var(--main)] text-white p-3 h-full flex items-center"
+        style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 12% 50%); transform: scaleX(-1);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        </button>
+    </div>
+    </div>
+     <div class="relative bg-white rounded-2xl shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center text-center hover:shadow-[0_8px_25px_rgba(0,0,0,0.12)] transition">
+    
+    <div class="absolute top-3 left-3 z-10 bg-white p-2 rounded-full shadow-md cursor-pointer hover:bg-gray-50 transition">
+        <svg class="w-5 h-5 text-gray-400 hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+        </svg>
+    </div>
+
+    <img src="./imgs/book.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+    
+    <div class="text-yellow-400 text-xs mb-2 flex justify-center gap-2">
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+        <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+    </div>
+    
+    <h3 class="font-bold text-sm md:text-base text-gray-800 mb-1">الحكم هو الموت</h3>
+    <p class="text-gray-500 text-xs md:text-sm mb-4">أنتوني هورويتس</p>
+    
+    <div class="mt-auto w-full flex items-center rounded-lg overflow-hidden bg-[#F1F5F9]">
+        <span class="flex-1 text-right font-bold text-[var(--main)] text-sm py-3 pr-2">23 د.ك</span>
+        
+        <button class="bg-[var(--main)] text-white p-3 h-full flex items-center"
+        style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 12% 50%); transform: scaleX(-1);">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 3h2h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+        </svg>
+        </button>
+    </div>
+    </div>
+        <div class="relative bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition overflow-hidden">
+  
+  <div class="absolute top-3 left-3 z-10 bg-white p-2 rounded-full shadow-md cursor-pointer hover:bg-gray-50 transition">
+    <svg class="w-5 h-5 text-gray-400 hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+    </svg>
+  </div>
+
+  <img src="./imgs/book-2.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+  
+  <div class="text-yellow-400 text-xs my-2 flex justify-center gap-2">
+    <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+    <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+    <img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" />
+  </div>
+  
+  <h3 class="font-bold text-sm md:text-base text-gray-800 my-1">فضائل الضغينة</h3>
+  <p class="text-gray-500 text-xs md:text-sm my-4">مؤمن سمير</p>
+  
+  <button class="w-full bg-[#391462] text-white py-2.5 rounded-lg font-bold text-sm transition hover:opacity-90">
+    اشتراك
+  </button>
+</div>
+        
+        
+       
+    </div>
+    <aside class="w-72 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm " dir="rtl">
+  
+  <h2 class="text-xl font-bold text-[#62748E] mb-6 text-right">تصفية</h2>
+
+  <div class="mb-6">
+    <div class="flex justify-between items-center cursor-pointer mb-4">
+      <h3 class="font-bold text-lg">لغة الكتاب</h3>
+      <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </div>
+    <div class="space-y-3">
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="radio" name="lang" class="w-4 h-4 text-[#391462] border-gray-300">
+        <span class="text-gray-700">الكتب عربية</span>
+      </label>
+      <label class="flex items-center gap-3 cursor-pointer">
+        <input type="radio" name="lang" class="w-4 h-4 text-[#391462] border-gray-300">
+        <span class="text-gray-700">الكتب الإنجليزية</span>
+      </label>
+    </div>
+  </div>
+
+  <hr class="my-4 border-gray-100">
+
+  <div class="mb-6">
+    <div class="flex justify-between items-center cursor-pointer mb-4">
+      <h3 class="font-bold text-lg">ترتيب حسب</h3>
+      <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </div>
+    <select class="w-full p-2 border border-gray-300 rounded-lg text-gray-600 focus:outline-none">
+      <option>الأحدث</option>
+      <option>الأقدم</option>
+    </select>
+  </div>
+
+  <hr class="my-4 border-gray-100">
+
+  <div class="mb-6">
+    <div class="flex justify-between items-center cursor-pointer mb-4">
+      <h3 class="font-bold text-lg">الأقسام</h3>
+      <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </div>
+    <input type="text" placeholder="ابحث عن الأقسام" class="w-full p-2 border border-gray-200 rounded-lg mb-3 text-sm focus:border-[#391462] outline-none">
+    <div class="space-y-3">
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" class="rounded border-gray-300"> كتب متنوعة</label>
+        <span class="text-gray-400">(9979)</span>
+      </div>
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" class="rounded border-gray-300"> إدارة أعمال</label>
+        <span class="text-gray-400">(714)</span>
+      </div>
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" class="rounded border-gray-300"> مترجمات</label>
+        <span class="text-gray-400">(5004)</span>
+      </div>
+    </div>
+    <a href="#" class="text-[#391462] text-sm mt-3 block font-bold">عرض المزيد</a>
+  </div>
+
+  <hr class="my-4 border-gray-100">
+
+  <div>
+    <div class="flex justify-between items-center cursor-pointer mb-4">
+      <h3 class="font-bold text-lg">دور النشر</h3>
+      <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </div>
+    <input type="text" placeholder="ابحث عن دور النشر" class="w-full p-2 border border-gray-200 rounded-lg mb-3 text-sm focus:border-[#391462] outline-none">
+    <div class="space-y-3">
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" class="rounded border-gray-300"> عصير الكتب للتر...</label>
+        <span class="text-gray-400">(950)</span>
+      </div>
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" class="rounded border-gray-300"> لمات للنشر والت...</label>
+        <span class="text-gray-400">(417)</span>
+      </div>
+      <div class="flex justify-between items-center text-sm">
+        <label class="flex items-center gap-2"><input type="checkbox" class="rounded border-gray-300"> بنت الزيات</label>
+        <span class="text-gray-400">(3)</span>
+      </div>
+    </div>
+    <a href="#" class="text-[#391462] text-sm mt-3 block font-bold">عرض المزيد</a>
+  </div>
+</aside>
+  </main>
+</body>
+</html>
+</html>
