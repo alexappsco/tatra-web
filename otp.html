@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>إنشاء حساب</title>
+  <title>رمز التحقق</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
@@ -11,7 +11,13 @@
   <style>
     :root {
       --main: #391462;
+      dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+    .chip-active { background-color: #38135C !important; color: white !important; border-color: #38135C !important; }
+    #favModal {
+  margin: auto;
+}
     }
+    
   </style>
 </head>
 
@@ -66,7 +72,7 @@
     </div>
 
     <!-- BUTTON -->
-    <button class="w-full bg-[var(--main)] text-white py-3 rounded-full font-bold hover:opacity-90 transition">
+    <button id="openDialogBtn" class="w-full bg-[var(--main)] text-white py-3 rounded-full font-bold hover:opacity-90 transition">
       دخول
     </button>
 
@@ -92,6 +98,72 @@
 </div>
 
 </div>
+<dialog id="favModal" class="p-8 rounded-3xl shadow-xl w-[90%] max-w-2xl bg-white backdrop:backdrop-blur-sm">
+  <div class="text-center">
+    <h2 class="text-xl font-bold text-gray-800 mb-6">اختار انواع الكتب المفضلة اليك لكي تستمتع بالقراءة</h2>
+    
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>اقل من 100</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>رومانسية</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>اسلاميه</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+           <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>رعب</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>تشويق</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+           <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>ادب</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>روايات حدثت بالفعل</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>سيكولوجي</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>علوم</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>تاريخ</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>دراما</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+           <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>كيمياء</span>
+        </button>
+        <button onclick="toggleChip(this)" class="chip border border-gray-300 rounded-full px-4 py-2 text-sm flex items-center gap-2 transition">
+            <svg class="icon w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> <span>علوم الارض</span>
+        </button>
+    </div>
 
+    <button class="text-[var(--main)] font-bold mb-6 block w-full">اعرض المزيد</button>
+    <button onclick="window.location.href='sign-in.html'" class="w-full bg-[var(--main)] text-white py-3 rounded-full font-bold hover:opacity-90 transition">متابعه</button>
+    <p class="text-gray-400 text-xs mt-3">اختار 3 اقسام او اكثر للمتابعه</p>
+  </div>
+</dialog>
+
+<script>
+  const modal = document.getElementById('favModal');
+  document.getElementById('openDialogBtn').addEventListener('click', () => modal.showModal());
+
+  function toggleChip(btn) {
+    const svg = btn.querySelector('.icon');
+    if (btn.classList.contains('chip-active')) {
+      btn.classList.remove('chip-active');
+      svg.innerHTML = '<path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
+    } else {
+      btn.classList.add('chip-active');
+      svg.innerHTML = '<path d="M5 12L10 17L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+    }
+  }
+</script>
 </body>
 </html>

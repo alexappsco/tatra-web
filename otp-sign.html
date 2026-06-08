@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>رمز التحقق</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <style>
+    :root {
+      --main: #391462;
+    }
+    
+  </style>
+</head>
+
+<body class="h-screen overflow-hidden font-[Almarai]">
+
+<div class="flex flex-col lg:flex-row h-screen">
+
+  <!-- IMAGE -->
+  <div class="w-full lg:w-1/2 relative hidden lg:block">
+    <img src="./imgs/main.jpg" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center text-center text-white px-10">
+      <div>
+        <h2 class="text-2xl font-bold mb-3">ابدأ رحلتك في عالم المعرفة الآن</h2>
+        <p class="text-base opacity-90">انضم إلى آلاف القراء في الوطن العربي</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM WRAPPER -->
+<div class="w-full lg:w-1/2 min-h-screen flex items-center justify-center bg-[#fffaf6] px-20">
+
+  <div class="w-full max-w-md text-center">
+<div class="text-right w-full">
+
+  <h1 class="text-3xl font-bold text-[var(--main)] mb-2">
+    رمز الدخول
+  </h1>
+
+  <p class="text-sm text-[var(--main)] mb-8 font-bold">
+    أهلاً بك مجددًا، أدخل بياناتك للمتابعة
+  </p>
+
+</div>
+    <!-- TITLE -->
+   
+
+    <!-- OTP -->
+    <div class="flex justify-center gap-5 my-14" >
+      <input maxlength="1"
+        class="w-14 h-14 text-center text-xl border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--main)] outline-none" />
+
+      <input maxlength="1"
+        class="w-14 h-14 text-center text-xl border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--main)] outline-none" />
+
+      <input maxlength="1"
+        class="w-14 h-14 text-center text-xl border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--main)] outline-none" />
+
+      <input maxlength="1"
+        class="w-14 h-14 text-center text-xl border border-gray-200 rounded-xl focus:ring-2 focus:ring-[var(--main)] outline-none" />
+    </div>
+
+    <!-- BUTTON -->
+    <button onclick="window.location.href='home.html'" class="w-full bg-[var(--main)] text-white py-3 rounded-full font-bold hover:opacity-90 transition">
+      دخول
+    </button>
+
+    <!-- TEXT -->
+    <p class="text-center text-sm text-[var(--main)] my-8">
+      أو الدخول عبر
+    </p>
+
+    <!-- GOOGLE -->
+    <div class="flex justify-center mt-3">
+      <button class="border border-gray-200 py-2 px-20 rounded-full text-[var(--main)] bg-white hover:bg-gray-100 transition">
+        Google
+      </button>
+    </div>
+
+    <!-- SIGNUP -->
+    <p onclick="window.location.href='sign-up.html'" class="text-xs text-orange-500 mt-5">
+      <span  class="text-[var(--main)] font-bold">ليس لديك حساب؟</span>
+      إنشاء حساب جديد
+    </p>
+
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
