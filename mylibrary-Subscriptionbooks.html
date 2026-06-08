@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الصفحة الرئيسية</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Almarai', sans-serif; }
+    :root { --main: #391462; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <div class="bg-gray-50 border-b border-gray-100 py-2 text-xs text-gray-500">
+  <div class="container mx-auto px-4 flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-0">
+
+    <!-- left -->
+    <div class="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+      <span class="flex items-center gap-1">
+        <img src="imgs/phone.svg" class="h-4 w-auto" />
+        +966556754472
+      </span>
+
+      <span class="flex items-center gap-1">
+        <img src="imgs/mail.svg" class="h-4 w-auto" />
+        Support@ttra.sa
+      </span>
+    </div>
+
+    <!-- right -->
+    <div class="flex flex-wrap gap-3 items-center justify-center lg:justify-end">
+
+      <span class="flex items-center gap-1">
+        <img src="imgs/arab.svg" class="h-4 w-auto" />
+        العربية - ر.س
+      </span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span onclick="window.location.href='favourit.html'" class="cursor-pointer">المفضلة</span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>سياسة الاستبدال أو الاسترجاع</span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>مكتبتي</span>
+
+    </div>
+
+  </div>
+</div>
+
+<header class="bg-white shadow-sm p-4">
+  <div class="container mx-auto flex flex-wrap items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <img src="./imgs/logo.png" class="w-28 md:w-32 h-auto object-contain" />
+
+    <!-- Search -->
+    <div class="w-full md:flex-1 md:max-w-lg order-3 md:order-none">
+      <div class="relative">
+        <input
+          class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 px-4 text-right"
+          placeholder="ابحث عما تريد"
+        />
+        <span class="absolute left-3 top-4 text-gray-400"><img src="imgs/serach.svg" class="h-4 w-4 " /></span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4 md:gap-6">
+
+      <!-- login -->
+      <div class="flex items-center gap-2">
+        <span class="text-xl md:text-2xl text-gray-400"><img src="imgs/account.svg" class="h-6 w-6" /></span>
+        <div class="text-sm text-right hidden sm:block">
+          <p class="text-xs text-gray-400">مرحباً بك</p>
+          <p class="font-bold text-[var(--main)]">تسجيل دخول</p>
+        </div>
+      </div>
+
+      <!-- cart -->
+      <div class="flex items-center gap-2">
+        <div class="relative">
+          <span class="text-xl md:text-2xl"><img src="imgs/cart.svg" class="h-6 w-6" /></span>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+            2
+          </span>
+        </div>
+
+        <div class="text-sm text-right hidden sm:block">
+          <p class="text-xs text-gray-400">سلة المشتريات</p>
+          <p class="font-bold text-[var(--main)]">1,200 ر.س</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+<div class="w-full bg-[#391462] py-3 px-4 md:px-10 flex justify-start gap-6 text-white text-sm font-medium z-20">
+      <a href="#" class="hover:underline">مترجمات ▾</a>
+      <a href="#" class="hover:underline">اداره اعمال ▾</a>
+      <a href="#" class="hover:underline">رعب ▾</a>
+      <a href="#" class="hover:underline">سياسه ▾</a>
+      <a href="#" class="hover:underline">رومانسيه ▾</a>
+    </div>
+    <!-- Header -->
+<header class="bg-[#EDEAF3] border-b border-gray-200">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="text-right">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-[var(--main)]">
+                مكتبتي
+            </h1>
+            <p class="text-gray-500 text-sm mt-1">
+                جميع كتبك المفضلة في مكان واحد
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- Content -->
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-10">
+        <div class="bg-white rounded-full shadow-md p-1 flex items-center gap-1 overflow-x-auto">
+             <button
+                    onclick="window.location.href='mylibrary-Purchasedbooks.html'"
+                 class="px-5 md:px-8 py-3 text-sm font-bold text-gray-500 hover:text-[var(--main)] transition whitespace-nowrap">
+                كتب مشتراه
+            </button>
+            <button
+                onclick="window.location.href='mylibrary-Subscriptionbooks.html'"
+                  class="px-5 md:px-8 py-3 text-sm font-bold text-[var(--main)] border-b-2 border-[var(--main)] whitespace-nowrap">
+                كتب الاشتراك
+            </button>
+                <button
+                onclick="window.location.href='mylibrary-free-books.html'"
+                  class="px-5 md:px-8 py-3 text-sm font-bold text-gray-500 hover:text-[var(--main)] transition whitespace-nowrap">
+                كتب مجانية
+            </button>
+        </div>
+    </div>
+
+    <!-- Books Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+    <div class="bg-white  rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img src="./imgs/book-2.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+      <div class="text-yellow-400 text-xs my-2 flex justify-center gap-2"><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /></div>
+      <h3 class="font-bold text-sm md:text-base text-gray-800 my-1">فضائل الضغينة</h3>
+      <p class="text-gray-500 text-xs md:text-sm my-4">مؤمن سمير</p>
+      
+      <button class="w-full bg-[#391462] text-white py-2.5 rounded-lg font-bold text-sm transition hover:opacity-90">
+        اشتراك
+      </button>
+    </div>
+     <div class="bg-white  rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img src="./imgs/book-2.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+      <div class="text-yellow-400 text-xs my-2 flex justify-center gap-2"><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /></div>
+      <h3 class="font-bold text-sm md:text-base text-gray-800 my-1">فضائل الضغينة</h3>
+      <p class="text-gray-500 text-xs md:text-sm my-4">مؤمن سمير</p>
+      
+      <button class="w-full bg-[#391462] text-white py-2.5 rounded-lg font-bold text-sm transition hover:opacity-90">
+        اشتراك
+      </button>
+    </div>
+     <div class="bg-white  rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img src="./imgs/book-2.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+      <div class="text-yellow-400 text-xs my-2 flex justify-center gap-2"><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /></div>
+      <h3 class="font-bold text-sm md:text-base text-gray-800 my-1">فضائل الضغينة</h3>
+      <p class="text-gray-500 text-xs md:text-sm my-4">مؤمن سمير</p>
+      
+      <button class="w-full bg-[#391462] text-white py-2.5 rounded-lg font-bold text-sm transition hover:opacity-90">
+        اشتراك
+      </button>
+    </div>
+     <div class="bg-white  rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img src="./imgs/book-2.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+      <div class="text-yellow-400 text-xs my-2 flex justify-center gap-2"><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /></div>
+      <h3 class="font-bold text-sm md:text-base text-gray-800 my-1">فضائل الضغينة</h3>
+      <p class="text-gray-500 text-xs md:text-sm my-4">مؤمن سمير</p>
+      
+      <button class="w-full bg-[#391462] text-white py-2.5 rounded-lg font-bold text-sm transition hover:opacity-90">
+        اشتراك
+      </button>
+    </div>
+     <div class="bg-white  rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img src="./imgs/book-2.png" class="w-full aspect-[2/3] object-cover rounded-xl mb-4" alt="كتاب" />
+      <div class="text-yellow-400 text-xs my-2 flex justify-center gap-2"><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /><img src="./imgs/star.svg" class="w-4 h-4" alt="نجمة" /></div>
+      <h3 class="font-bold text-sm md:text-base text-gray-800 my-1">فضائل الضغينة</h3>
+      <p class="text-gray-500 text-xs md:text-sm my-4">مؤمن سمير</p>
+      
+      <button class="w-full bg-[#391462] text-white py-2.5 rounded-lg font-bold text-sm transition hover:opacity-90">
+        اشتراك
+      </button>
+    </div>
+    </div>
+
+</main>
+<footer dir="rtl" class="bg-[#f8f8f8] border-t border-gray-200">
+
+    <!-- Newsletter -->
+    <div class="border-b border-gray-200">
+        <div class="container mx-auto px-4 py-6">
+
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 items-center">
+
+                <!-- Text -->
+                <div class="flex items-center gap-4 justify-center xl:justify-start text-center xl:text-right">
+
+                    <div
+                        class="w-12 h-12 rounded-full bg-[#f3ebfb] flex items-center justify-center shrink-0">
+                        <img src="./imgs/email.svg"
+                             alt=""
+                             class="w-6 h-6">
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg">
+                            الاشتراك في النشرة البريدية
+                        </h3>
+
+                        <p class="text-sm text-gray-500">
+                            انضم الآن واحصل على خصم 10% على مشترياتك التالية
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Form -->
+                <div class="w-full">
+
+                    <div class="flex w-full max-w-xl mx-auto">
+
+                        <input
+                            type="email"
+                            placeholder="ادخل البريد الإلكتروني"
+                            class="flex-1 min-w-0 h-11 px-4 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#391462]">
+
+                        <button
+                            class="bg-[#391462] text-white px-6 h-11 shrink-0 rounded-l-md whitespace-nowrap">
+                            اشتراك
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Apps -->
+                <div class="flex items-center justify-center xl:justify-end gap-2 flex-wrap">
+
+                    <img
+                        src="./imgs/apple-store.png"
+                        class="h-10 w-auto object-contain"
+                        alt="App Store">
+
+                   <img
+                        src="./imgs/apple-store.png"
+                        class="h-10 w-auto object-contain"
+                        alt="App Store">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container mx-auto px-4 py-10">
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+            <!-- About -->
+            <div class="col-span-2 md:col-span-3 lg:col-span-1">
+                <h4 class="font-bold text-gray-800 mb-4">
+                    معلومات عنا
+                </h4>
+
+                <p class="text-sm text-gray-500 leading-7">
+                    نص تعريفي قصير عن المتجر والخدمات المقدمة للعملاء.
+                </p>
+            </div>
+
+           <!-- Account -->
+<div>
+    <h4 class="font-bold text-gray-800 mb-4">
+        حسابي
+    </h4>
+
+    <ul class="space-y-2 text-sm text-gray-500">
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>حسابي</span>
+            </a>
+        </li>
+        <li>
+            <a href="/book-request.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>طلباتي</span>
+            </a>
+        </li>
+        <li>
+            <a href="/cart.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>سلة المشتريات</span>
+            </a>
+        </li>
+        <li>
+            <a href="/favourit.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>المفضلة</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Links -->
+<div>
+    <h4 class="font-bold text-gray-800 mb-4">
+        روابط مهمة
+    </h4>
+
+    <ul class="space-y-2 text-sm text-gray-500">
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>من نحن</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>سياسة الخصوصية</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>الشروط والأحكام</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>الدعم الفني</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Contact -->
+<div>
+    <h4 class="font-bold text-gray-800 mb-4">
+        تواصل معنا
+    </h4>
+
+    <ul class="space-y-2 text-sm text-gray-500 break-all">
+        <li class="flex items-center gap-2">
+            <img src="imgs/arows.svg" alt="" class="">
+            <span>واتساب : 098765456789</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <img src="imgs/arows.svg" alt="" class="">
+            <span>موبايل : 9876545678</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <img src="imgs/arows.svg" alt="" class="">
+            <span>البريد : info@example.com</span>
+        </li>
+    </ul>
+</div>
+
+            <!-- Social -->
+            <div>
+                <h4 class="font-bold text-gray-800 mb-4">
+                    تابعنا
+                </h4>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/snap.svg"
+                             class="w-4 h-4 object-contain">
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/instagram.svg"
+                             class="w-4 h-4 object-contain">
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/twitter.svg"
+                             class="w-4 h-4 object-contain">
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/facebook.svg"
+                             class="w-3 h-3 object-contain">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   <!-- Bottom -->
+<div class="bg-[#391462] text-white">
+    <div class="container mx-auto px-4 py-3">
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs sm:text-sm">
+
+            <!-- Right / Copyright -->
+            <div class="text-center md:text-right whitespace-nowrap">
+                الحقوق محفوظة لمصطفى الحسيني
+            </div>
+
+            <!-- Center / Tax + Payments -->
+            <div class="flex items-center justify-center flex-nowrap gap-1 sm:gap-2">
+
+                <div class="flex items-center gap-1 whitespace-nowrap">
+                    <img src="./imgs/value(2).jpg"
+                         class="w-4 h-4 sm:w-6 sm:h-6 object-contain">
+
+                    <span>
+                        الرقم الضريبي : 546987552
+                    </span>
+                </div>
+
+                <img src="./imgs/mada.svg" class="h-4 sm:h-6 w-auto object-contain">
+                <img src="./imgs/paypal.svg" class="h-4 sm:h-6 w-auto object-contain">
+                <img src="./imgs/master.svg" class="h-4 sm:h-6 w-auto object-contain">
+                <img src="./imgs/visa.svg" class="h-4 sm:h-6 w-auto object-contain">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</footer>
+</body>
+</html>
