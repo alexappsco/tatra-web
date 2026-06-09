@@ -124,9 +124,9 @@
     </span>
   </div>
 </header>
+<!-- Hero Section -->
 <section class="container mx-auto px-4 py-8">
 
-    <!-- Hero Section -->
     <div class="relative overflow-hidden rounded-3xl">
 
         <!-- Background -->
@@ -136,17 +136,17 @@
             class="absolute inset-0 w-full h-full object-cover"
         >
 
-        <div class="absolute inset-0 bg-black/20"></div>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/55"></div>
 
         <div class="relative z-10 min-h-[300px] lg:min-h-[430px] flex items-center">
 
-            <!-- Content -->
             <div class="grid lg:grid-cols-2 gap-10 w-full p-6 lg:p-12">
 
-                <!-- Right Content -->
-                <div class="flex flex-col justify-center text-white order-2 lg:order-1">
+                <!-- Content -->
+                <div class="flex flex-col justify-center text-white order-1">
 
-                    <h1 class="text-3xl md:text-5xl font-extrabold mb-6">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-6">
                         قراءة بلا حدود
                     </h1>
 
@@ -196,19 +196,19 @@
 
                 </div>
 
-                <!-- Books -->
-                <div class="flex justify-center lg:justify-start items-center gap-6 order-1 lg:order-2">
+                <!-- Papers -->
+                <div class="hidden lg:flex justify-center items-center gap-16 xl:gap-12 order-2">
 
                     <img
                         src="imgs/paper.jpg"
                         alt=""
-                        class="w-32 md:w-40 lg:w-44 rotate-[-3deg] drop-shadow-2xl"
+                        class="w-44 xl:w-48 rotate-[-4deg] drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)]"
                     >
 
                     <img
                         src="imgs/paper.jpg"
                         alt=""
-                        class="w-32 md:w-40 lg:w-44 rotate-[8deg] drop-shadow-2xl"
+                        class="w-44 xl:w-48 rotate-[2deg] drop-shadow-[0_15px_25px_rgba(0,0,0,0.5)]"
                     >
 
                 </div>
@@ -220,14 +220,12 @@
     </div>
 
 </section>
-
-
 <!-- Packages -->
 <section class="container mx-auto px-4 py-10">
 
     <div class="text-center mb-12">
 
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-3">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
             اختر خطة الاشتراك المناسبة لك
         </h2>
 
@@ -239,37 +237,38 @@
 
     <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
 
-        <!-- Package -->
-        <div
-            class="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm"
-        >
+        <!-- Package 1 -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm flex flex-col h-full">
 
-            <h3 class="text-2xl font-bold text-gray-800 mb-8">
-                شهري
-            </h3>
+            <div class="flex-1">
 
-            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                    شهري
+                </h3>
 
-                <div class="flex justify-center items-end gap-2">
+                <div class="mb-8">
 
-                    <span class="text-[#5B2B83] font-bold">
-                        دولار أمريكي
-                    </span>
+                    <div class="flex justify-center items-end gap-2">
+                        <span class="text-5xl font-bold text-[#391462]">
+                            15
+                        </span>
+                        <span class="text-[#5B2B83] font-bold">
+                            دولار أمريكي
+                        </span>
+                    </div>
 
-                    <span class="text-5xl font-extrabold text-[#391462]">
-                        15
-                    </span>
+                    <p class="text-gray-400 text-sm mt-3">
+                        يتجدد كل شهر بالسعر 
+                        <br>
+                        <span>الأصلي</span>
+                    </p>
 
                 </div>
-
-                <p class="text-gray-400 text-sm mt-3">
-                    يتجدد كل شهر بالسعر الأصلي
-                </p>
 
             </div>
 
             <button
-                class="w-full h-12 border border-[#5B2B83] text-[#5B2B83] rounded-lg font-bold hover:bg-[#5B2B83] hover:text-white transition"
+                class="w-full h-12 border border-[#5B2B83] text-[#5B2B83] rounded-lg font-bold hover:bg-[#5B2B83] hover:text-white transition mt-auto"
             >
                 اشترك
             </button>
@@ -278,76 +277,82 @@
 
         <!-- Featured Package -->
         <div
-            class="bg-gradient-to-b from-[#8C4DB0] to-[#5D247D] rounded-2xl p-8 text-center shadow-2xl text-white scale-100 md:scale-105"
+            class="bg-gradient-to-b from-[#8C4DB0] to-[#5D247D] rounded-2xl p-8 text-center shadow-2xl text-white border-2 flex flex-col h-full"
+            style="border-color:#391462"
         >
 
-            <h3 class="text-2xl font-bold mb-8">
-                سنوي
-            </h3>
+            <div class="flex-1">
 
-            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-10">
+                    سنوي
+                </h3>
 
-                <div class="flex justify-center items-end gap-2">
+                <div class="mb-10 space-y-2">
 
-                    <span class="font-bold">
-                        دولار أمريكي
-                    </span>
+                    <!-- السعر -->
+                    <div class="flex justify-center items-baseline gap-3">
+                        <span class="text-6xl font-bold leading-none">
+                            81
+                        </span>
+                        <span class="text-lg font-semibold leading-none opacity-90">
+                            دولار أمريكي
+                        </span>
+                    </div>
 
-                    <span class="text-6xl font-extrabold">
-                        81
-                    </span>
+                    <!-- السعر المخفّض -->
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        <span class="line-through">بدلاً من</span> 180 دولار أمريكي 
+                    </p>
+
+                    <!-- التجديد -->
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        تتجدد كل سنة بالسعر الأصلي
+                    </p>
 
                 </div>
-
-                <p class="text-sm mt-3 opacity-90">
-                    وفر 180 دولار أمريكي
-                </p>
-
-                <p class="text-sm opacity-90">
-                    يتجدد كل سنة بالسعر الأصلي
-                </p>
 
             </div>
 
             <button
-                class="w-full h-12 bg-white text-[#5B2B83] rounded-lg font-bold hover:bg-gray-100 transition"
+                class="w-full h-12 bg-white text-[#5B2B83] rounded-lg font-bold hover:bg-gray-100 transition mt-auto"
             >
                 اشترك
             </button>
 
         </div>
 
-        <!-- Package -->
-        <div
-            class="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm"
-        >
+        <!-- Package 3 -->
+        <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm flex flex-col h-full">
 
-            <h3 class="text-2xl font-bold text-gray-800 mb-8">
-                شهري
-            </h3>
+            <div class="flex-1">
 
-            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8">
+                    شهري
+                </h3>
 
-                <div class="flex justify-center items-end gap-2">
+                <div class="mb-8">
 
-                    <span class="text-[#5B2B83] font-bold">
-                        دولار أمريكي
-                    </span>
+                    <div class="flex justify-center items-end gap-2">
+                        <span class="text-4xl font-bold text-[#391462]">
+                            15
+                        </span>
+                        <span class="text-[#5B2B83] font-bold">
+                            دولار أمريكي
+                        </span>
+                    </div>
 
-                    <span class="text-5xl font-extrabold text-[#391462]">
-                        15
-                    </span>
+                    <p class="text-gray-400 text-sm mt-3">
+                        يتجدد كل شهر بالسعر 
+                        <br>
+                        <span>الأصلي</span>
+                    </p>
 
                 </div>
-
-                <p class="text-gray-400 text-sm mt-3">
-                    يتجدد كل شهر بالسعر الأصلي
-                </p>
 
             </div>
 
             <button
-                class="w-full h-12 border border-[#5B2B83] text-[#5B2B83] rounded-lg font-bold hover:bg-[#5B2B83] hover:text-white transition"
+                class="w-full h-12 border border-[#5B2B83] text-[#5B2B83] rounded-lg font-bold hover:bg-[#5B2B83] hover:text-white transition mt-auto"
             >
                 اشترك
             </button>
