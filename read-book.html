@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f3f4f6; }
+        /* تحسين شكل شريط التمرير ليطابق التصميم */
+        input[type=range] { accent-color: #4c1d95; }
+        #toolbar { display: none; position: absolute; transition: opacity 0.2s; }
+    </style>
+</head>
+<body class="h-screen flex flex-col">
+
+ <header class="bg-[#4c1d95] text-white px-3 md:px-6 py-3">
+    <div class="flex items-center justify-between gap-3">
+
+        <!-- اليمين -->
+        <div class="flex items-center gap-3 shrink-0">
+            <span class="font-medium text-sm md:text-base truncate max-w-[120px] md:max-w-none">
+                Book name
+            </span>
+            <!-- <span class="text-xl cursor-pointer hidden sm:block cursor-pointer">≡</span> -->
+        </div>
+
+        <!-- الوسط -->
+        <div class="flex items-center gap-2 bg-[#3b177a] px-2 py-1 rounded text-sm overflow-x-auto">
+            <span class="cursor-pointer shrink-0 hidden sm:block cursor-pointer">⛶</span>
+            <span class="cursor-pointer shrink-0 hidden sm:block cursor-pointer">↺</span>
+
+            <span class="border-l border-white/20 h-5 mx-1 shrink-0"></span>
+
+            <button class="text-lg font-bold shrink-0">+</button>
+
+            <span class="bg-[#1e1e1e] px-2 py-0.5 rounded min-w-[50px] text-center shrink-0">
+                100%
+            </span>
+
+            <button class="text-lg font-bold shrink-0">−</button>
+
+            <span class="border-l border-white/20 h-5 mx-1 shrink-0"></span>
+
+            <span class="shrink-0">2</span>
+            <span class="shrink-0">/</span>
+
+            <span class="bg-[#1e1e1e] px-2 py-0.5 rounded min-w-[30px] text-center shrink-0">
+                1
+            </span>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+           <span id="menu-btn" class="cursor-pointer">
+            <img src="/imgs/menu.svg" alt="Menu"/>
+            </span>
+        </div>
+
+    </div>
+</header>
+
+  <main class="flex-grow flex items-center justify-center p-4 w-full">
+    <div class="relative bg-white w-full max-w-7xl h-[90vh] shadow-2xl flex flex-col overflow-hidden">
+        
+        <div class="flex-grow p-4 md:p-20 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 overflow-hidden">
+            
+           <button class="absolute -right-1 md:right-4 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent border border-gray-300 p-2 md:p-3 rounded-full shadow-lg z-20 text-gray-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+
+            <div id="page1" class="text-justify text-gray-800 leading-7 md:leading-8 overflow-y-auto pr-2 text-sm md:text-base">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia earum voluptas dolorem nam doloribus blanditiis? Odit earum nemo sapiente pariatur iste! Ad, ipsam. Dolore eaque animi dicta facere voluptate porro!
+                Reiciendis tempore, totam ab nisi minus voluptates provident assumenda voluptate commodi amet non consequatur. Corporis, quod saepe vero maxime aliquam maiores ratione quisquam accusantium adipisci veniam numquam facilis, laboriosam quo.
+                Eos autem sint vel aperiam labore voluptas hic, est, earum quaerat qui eligendi officiis porro assumenda voluptatum! Aspernatur accusamus fuga quis soluta quo suscipit, sit aliquid itaque, quibusdam ipsam nostrum.
+                Reprehenderit aut odio odit ut vel repudiandae minus necessitatibus esse ratione praesentium optio, iste sunt, numquam quia nostrum dolor aliquid et repellat excepturi non dolorum eaque tempora. Nam, porro vel!
+                Blanditiis vitae nostrum delectus modi nemo et facere quis odio saepe eaque ea, sunt nam corporis rerum facilis unde, dolore non. Provident asperiores aut hic, ratione sed cum voluptatibus facilis.</p>
+            </div>
+           <div id="page2" class="hidden md:block text-justify text-gray-800 leading-7 md:leading-8 overflow-y-auto pr-2 text-sm md:text-base">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias voluptatem beatae minus sint, consequatur adipisci ut harum doloribus error cumque dolor ipsam modi blanditiis quod deleniti voluptate dolorum quibusdam sit.
+                Dolore, veniam. Voluptatum, dicta odit velit quidem et vel atque aspernatur sed beatae dolore neque non! Iste maxime libero id corporis facere. Ratione in repellendus, totam sint reprehenderit mollitia nostrum?
+                Labore vitae hic expedita? Dolor officia maiores est autem vel, esse sapiente. Debitis voluptate eligendi beatae mollitia deserunt tenetur! Qui dolore adipisci provident placeat alias saepe sint animi ipsa neque.
+                Et, repellat porro. Architecto officia aut vel odio accusantium corrupti nesciunt aliquam voluptatum omnis iste perspiciatis nam, illum, ea officiis saepe sit quaerat velit. Maxime nobis iure recusandae voluptate magnam.
+                Itaque deserunt earum sunt atque tempora aliquam officiis quas alias in debitis aspernatur voluptate iure consequatur dolor eos qui, suscipit autem porro beatae veritatis? Autem architecto soluta id esse mollitia?</p>
+            </div>
+
+           <button class="absolute -left-1 md:left-4 top-1/2 -translate-y-1/2 bg-transparent hover:bg-transparent border border-gray-300 p-2 md:p-3 rounded-full shadow-lg z-20 text-gray-700">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+        </div>
+
+        <footer class="p-4 flex justify-between items-center bg-gray-50/50">
+            <input type="range" class="w-32 md:w-1/5 accent-purple-800">
+            <span class="text-sm text-gray-600 font-medium">245/85</span>
+
+        </footer>
+    </div>
+</main>
+    
+
+ <div id="toolbar" class="bg-white/70 backdrop-blur-md shadow-lg border-[3px] border-white flex items-center px-8 py-3 gap-8 rounded-full z-50 w-fit">
+    <button class="flex flex-col items-center gap-1 text-gray-800 hover:text-blue-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+        </svg>
+        <span class="text-[12px] font-bold">تظليل</span>
+    </button>
+
+    <button class="flex flex-col items-center gap-1 text-gray-800 hover:text-blue-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+        <span class="text-[12px] font-bold">ملاحظة</span>
+    </button>
+
+    <button class="flex flex-col items-center gap-1 text-gray-800 hover:text-blue-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+        </svg>
+        <span class="text-[12px] font-bold">صوت AI</span>
+    </button>
+</div>
+
+  <div id="sidebar" class="fixed inset-y-0 right-0 z-50 w-full md:w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+  <div class="p-6">
+    
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold">ملاحظاتي</h2>
+      <button id="close-btn" class="text-gray-500 text-3xl">&times;</button>
+    </div>
+    
+    <input type="text" placeholder="بحث في الملاحظات..." class="w-full p-3 bg-gray-100 border-none rounded-xl mb-6 focus:ring-2 focus:ring-indigo-900" />
+
+    <div class="space-y-6">
+      
+     <div class="bg-[#F5EFE64D] p-4 rounded-xl shadow-sm flex items-stretch gap-3">
+  <div class="w-1 h-8 bg-[#391462] rounded-full shrink-0"></div>
+
+  <div class="min-w-0 break-words">
+    <p class="text-xs text-gray-500 mb-1 break-words">
+      "إن القدرة على توجيه انتباهك..."
+    </p>
+
+    <p class="text-gray-900 font-semibold break-words">
+      فكرة قوية جداً عن التركيز.
+    </p>
+  </div>
+</div>
+
+       <div class="bg-[#F5EFE64D] p-4 rounded-xl shadow-sm flex items-stretch gap-3">
+  <div class="w-1 h-8 bg-[#391462] rounded-full shrink-0"></div>
+
+  <div class="min-w-0 break-words">
+    <p class="text-xs text-gray-500 mb-1 break-words">
+      "إن القدرة على توجيه انتباهك..."
+    </p>
+
+    <p class="text-gray-900 font-semibold break-words">
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus repudiandae neque illum eaque mollitia corrupti officia fugiat nostrum, deleniti, excepturi eveniet blanditiis sunt rerum suscipit! Eius, aut ut. Quam, unde.
+    </p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- طبقة تغطية (Overlay) عند فتح القائمة -->
+<div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+<script>
+        const toolbar = document.getElementById('toolbar');
+        document.addEventListener('selectionchange', () => {
+            const selection = window.getSelection();
+            if (selection.toString().length > 0) {
+                const range = selection.getRangeAt(0);
+                const rect = range.getBoundingClientRect();
+                toolbar.style.display = 'flex';
+                toolbar.style.top = (rect.top + window.scrollY - 50) + 'px';
+                toolbar.style.left = (rect.left + (rect.width / 2)) + 'px';
+            } else {
+                toolbar.style.display = 'none';
+            }
+        });
+    </script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-btn');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+function toggleSidebar() {
+  sidebar.classList.toggle('translate-x-full');
+  overlay.classList.toggle('hidden');
+}
+
+menuBtn.addEventListener('click', toggleSidebar);
+closeBtn.addEventListener('click', toggleSidebar);
+overlay.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>
