@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الكتب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Almarai', sans-serif; }
+    :root { --main: #391462; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+   <div class="bg-gray-50 border-b border-gray-100 py-2 text-xs text-gray-500">
+  <div class="container mx-auto px-4 flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-0">
+
+    <!-- left -->
+    <div class="flex flex-wrap gap-4 items-center justify-center lg:justify-start">
+      <span class="flex items-center gap-1">
+        <img src="imgs/phone.svg" class="h-4 w-auto" />
+        +966556754472
+      </span>
+
+      <span class="flex items-center gap-1">
+        <img src="imgs/mail.svg" class="h-4 w-auto" />
+        Support@ttra.sa
+      </span>
+    </div>
+
+    <!-- right -->
+    <div class="flex flex-wrap gap-3 items-center justify-center lg:justify-end">
+
+      <span class="flex items-center gap-1">
+        <img src="imgs/arab.svg" class="h-4 w-auto" />
+        العربية - ر.س
+      </span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>الكتب</span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>سياسة الاستبدال أو الاسترجاع</span>
+
+      <img src="imgs/line.svg" class="h-4 w-auto hidden lg:block" />
+
+      <span>مكتبتي</span>
+
+    </div>
+
+  </div>
+</div>
+
+<header class="bg-white shadow-sm p-4">
+  <div class="container mx-auto flex flex-wrap items-center justify-between gap-4">
+
+    <!-- Logo -->
+    <img src="./imgs/logo.png" class="w-28 md:w-32 h-auto object-contain" />
+
+    <!-- Search -->
+    <div class="w-full md:flex-1 md:max-w-lg order-3 md:order-none">
+      <div class="relative">
+        <input
+          class="w-full bg-gray-50 border border-gray-200 rounded-lg py-2.5 px-4 text-right"
+          placeholder="ابحث عما تريد"
+        />
+        <span class="absolute left-3 top-4 text-gray-400"><img src="imgs/serach.svg" class="h-4 w-4 " /></span>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="flex items-center gap-4 md:gap-6">
+
+      <!-- login -->
+      <div class="flex items-center gap-2">
+        <span class="text-xl md:text-2xl text-gray-400"><img src="imgs/account.svg" class="h-6 w-6" /></span>
+        <div class="text-sm text-right hidden sm:block">
+          <p class="text-xs text-gray-400">مرحباً بك</p>
+          <p class="font-bold text-[var(--main)]">تسجيل دخول</p>
+        </div>
+      </div>
+
+      <!-- cart -->
+      <div class="flex items-center gap-2">
+        <div class="relative">
+          <span class="text-xl md:text-2xl"><img src="imgs/cart.svg" class="h-6 w-6" /></span>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
+            2
+          </span>
+        </div>
+
+        <div class="text-sm text-right hidden sm:block">
+          <p class="text-xs text-gray-400">سلة المشتريات</p>
+          <p class="font-bold text-[var(--main)]">1,200 ر.س</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+<div class="w-full bg-[#391462] py-3">
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-16 flex gap-6 text-white text-sm font-medium justify-start">
+    <a href="#" class="hover:underline">مترجمات ▾</a>
+    <a href="#" class="hover:underline">اداره اعمال ▾</a>
+    <a href="#" class="hover:underline">رعب ▾</a>
+    <a href="#" class="hover:underline">سياسه ▾</a>
+    <a href="#" class="hover:underline">رومانسيه ▾</a>
+  </div>
+</div>
+<header
+  class="h-12 bg-white border border-gray-200 rounded-md px-6 flex items-center justify-start container mx-auto p-6 my-4 "
+>
+  <div class="flex items-center gap-4 text-sm text-gray-500">
+ <div
+      class="relative w-8 h-8 flex items-center justify-center bg-white"
+    >
+   
+    <img src="./imgs/home.svg" class="w-4 h-4 " alt="قلب" />
+     <img src="./imgs/row.svg" class=" " alt="قلب" />
+    </div>
+    <span class="font-medium text-gray-600">
+      الكتب
+    </span>
+
+   
+
+  </div>
+</header>
+
+<div class="container mx-auto flex flex-col md:flex-row gap-6">
+    
+   <aside class="w-full md:w-1/4 p-4">
+    <button id="toggleFilters" class="md:hidden w-full bg-[#391462] text-white py-3 rounded-lg mb-4 font-bold">
+        تصفية النتائج
+    </button>
+
+    <div id="filterSidebar" class="hidden md:block space-y-4">
+        <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+            
+            <div class="border-b pb-3 mb-3">
+                <div class="flex justify-between items-center cursor-pointer">
+                    <h2 class="font-bold text-gray-700">الفئة</h2>
+                    <span class=""><img src="/imgs/row-dowm.svg" /></span>
+                </div>
+                <div class="mt-3 space-y-2">
+                    <label class="flex justify-between items-center text-sm text-gray-600">
+                        <span>الكل</span>
+                        <input type="radio" checked class="text-indigo-600">
+                    </label>
+                    <a href="#" class="text-indigo-700 text-xs block mt-2">عرض المزيد</a>
+                    <span class="text-xs text-gray-400 block">(100)</span>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-700">الماركة</span>
+                    <span class=""><img src="/imgs/row-dowm.svg" /></span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-700">السعر</span>
+                    <span class=""><img src="/imgs/row-dowm.svg" /></span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-700">اللون</span>
+                    <span class=""><img src="/imgs/row-dowm.svg" /></span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b">
+                    <span class="text-gray-700">التقييم</span>
+                    <span class=""><img src="/imgs/row-dowm.svg" /></span>
+                </div>
+            </div>
+
+            <button class="w-full mt-6 border border-gray-300 py-2 rounded-lg text-gray-600 hover:bg-gray-50">
+                إعادة ضبط
+            </button>
+        </div>
+
+        <div class="hidden md:block">
+            <img src="imgs/device.png" alt="تسوق الآن" class="rounded-lg w-full  shadow-md">
+        </div>
+    </div>
+</aside>
+
+
+
+   <main class="flex-1 p-4">
+    <div class="flex justify-between items-center mb-6 p-4 border border-gray-200 rounded-lg">
+       <div class="flex gap-2">
+        <div class="w-8 h-8 bg-indigo-900 border border-indigo-900 rounded flex items-center justify-center cursor-pointer text-white">
+            <img src="/imgs/square .svg" alt="" >
+        </div>
+        <div class="w-8 h-8 bg-gray-100 border border-gray-300 rounded flex items-center justify-center cursor-pointer text-gray-500">
+            <img src="/imgs/menu-bar.svg" alt="" srcset="">
+        </div>
+    </div>
+    <div class="flex items-center gap-2 text-sm text-gray-600">
+       <span class="text-gray-400">ترتيب حسب :</span> <span> من الاعلى الى الاقل</span> 
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </div>
+    
+   
+</div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-white  rounded-lg shadow-sm border border-gray-100">
+            <!-- <span class="bg-purple-700 text-white px-3 py-1 text-xs rounded">جديد</span> -->
+            <img src="/imgs/device.png" alt="جهاز تابلت" class="w-full  h-48 object-cover  rounded">
+            <p class="text-sm text-[#391462] my-2 px-4">اجهزه</p>
+            <h3 class="font-bold text-lg px-4">جهاز تابلت لوحي</h3>
+            <p class="text-sm text-gray-500 px-4">تابلت</p>
+            <div class="flex items-center gap-2 my-2 px-4">
+                <span class="text-yellow-500 text-sm  flex gap-1 ">
+                  <img src="/imgs/star-card.svg" alt="" srcset=""> 
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card-gray.svg" alt="" srcset="">
+                 </span>
+                <span class="text-xs text-gray-400 ">(4.5)</span>
+            </div>
+            <p class="font-bold text-lg mb-4 px-4">250.00 د.ك</p>
+            
+            <div class="flex gap-2 mb-4 px-4">
+                <button class="flex-grow-[3] bg-white border border-gray-300 hover:bg-gray-50 py-2 rounded flex items-center justify-center gap-2">
+                    <span><img src="/imgs/cart-card.svg" alt="" srcset=""></span> أضف للسلة
+                </button>
+                  <button class="flex-1 bg-white border border-gray-300 hover:bg-gray-200 text-gray-600 py-2 rounded flex items-center justify-center">
+                    <img src="/imgs/love-card.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+        <div class="bg-white  rounded-lg shadow-sm border border-gray-100">
+            <!-- <span class="bg-purple-700 text-white px-3 py-1 text-xs rounded">جديد</span> -->
+            <img src="/imgs/device.png" alt="جهاز تابلت" class="w-full  h-48 object-cover  rounded">
+            <p class="text-sm text-[#391462] my-2 px-4">اجهزه</p>
+            <h3 class="font-bold text-lg px-4">جهاز تابلت لوحي</h3>
+            <p class="text-sm text-gray-500 px-4">تابلت</p>
+            <div class="flex items-center gap-2 my-2 px-4">
+                <span class="text-yellow-500 text-sm  flex gap-1 ">
+                  <img src="/imgs/star-card.svg" alt="" srcset=""> 
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card-gray.svg" alt="" srcset="">
+                 </span>
+                <span class="text-xs text-gray-400 ">(4.5)</span>
+            </div>
+            <p class="font-bold text-lg mb-4 px-4">250.00 د.ك</p>
+            
+            <div class="flex gap-2 mb-4 px-4">
+                <button class="flex-grow-[3] bg-white border border-gray-300 hover:bg-gray-50 py-2 rounded flex items-center justify-center gap-2">
+                    <span><img src="/imgs/cart-card.svg" alt="" srcset=""></span> أضف للسلة
+                </button>
+                  <button class="flex-1 bg-white border border-gray-300 hover:bg-gray-200 text-gray-600 py-2 rounded flex items-center justify-center">
+                    <img src="/imgs/love-card.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+        <div class="bg-white  rounded-lg shadow-sm border border-gray-100">
+            <!-- <span class="bg-purple-700 text-white px-3 py-1 text-xs rounded">جديد</span> -->
+            <img src="/imgs/device.png" alt="جهاز تابلت" class="w-full  h-48 object-cover  rounded">
+            <p class="text-sm text-[#391462] my-2 px-4">اجهزه</p>
+            <h3 class="font-bold text-lg px-4">جهاز تابلت لوحي</h3>
+            <p class="text-sm text-gray-500 px-4">تابلت</p>
+            <div class="flex items-center gap-2 my-2 px-4">
+                <span class="text-yellow-500 text-sm  flex gap-1 ">
+                  <img src="/imgs/star-card.svg" alt="" srcset=""> 
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card-gray.svg" alt="" srcset="">
+                 </span>
+                <span class="text-xs text-gray-400 ">(4.5)</span>
+            </div>
+            <p class="font-bold text-lg mb-4 px-4">250.00 د.ك</p>
+            
+            <div class="flex gap-2 mb-4 px-4">
+                <button class="flex-grow-[3] bg-white border border-gray-300 hover:bg-gray-50 py-2 rounded flex items-center justify-center gap-2">
+                    <span><img src="/imgs/cart-card.svg" alt="" srcset=""></span> أضف للسلة
+                </button>
+                  <button class="flex-1 bg-white border border-gray-300 hover:bg-gray-200 text-gray-600 py-2 rounded flex items-center justify-center">
+                    <img src="/imgs/love-card.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+        <div class="bg-white  rounded-lg shadow-sm border border-gray-100">
+            <!-- <span class="bg-purple-700 text-white px-3 py-1 text-xs rounded">جديد</span> -->
+            <img src="/imgs/device.png" alt="جهاز تابلت" class="w-full  h-48 object-cover  rounded">
+            <p class="text-sm text-[#391462] my-2 px-4">اجهزه</p>
+            <h3 class="font-bold text-lg px-4">جهاز تابلت لوحي</h3>
+            <p class="text-sm text-gray-500 px-4">تابلت</p>
+            <div class="flex items-center gap-2 my-2 px-4">
+                <span class="text-yellow-500 text-sm  flex gap-1 ">
+                  <img src="/imgs/star-card.svg" alt="" srcset=""> 
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card-gray.svg" alt="" srcset="">
+                 </span>
+                <span class="text-xs text-gray-400 ">(4.5)</span>
+            </div>
+            <p class="font-bold text-lg mb-4 px-4">250.00 د.ك</p>
+            
+            <div class="flex gap-2 mb-4 px-4">
+                <button class="flex-grow-[3] bg-white border border-gray-300 hover:bg-gray-50 py-2 rounded flex items-center justify-center gap-2">
+                    <span><img src="/imgs/cart-card.svg" alt="" srcset=""></span> أضف للسلة
+                </button>
+                  <button class="flex-1 bg-white border border-gray-300 hover:bg-gray-200 text-gray-600 py-2 rounded flex items-center justify-center">
+                    <img src="/imgs/love-card.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+        <div class="bg-white  rounded-lg shadow-sm border border-gray-100">
+            <!-- <span class="bg-purple-700 text-white px-3 py-1 text-xs rounded">جديد</span> -->
+            <img src="/imgs/device.png" alt="جهاز تابلت" class="w-full  h-48 object-cover  rounded">
+            <p class="text-sm text-[#391462] my-2 px-4">اجهزه</p>
+            <h3 class="font-bold text-lg px-4">جهاز تابلت لوحي</h3>
+            <p class="text-sm text-gray-500 px-4">تابلت</p>
+            <div class="flex items-center gap-2 my-2 px-4">
+                <span class="text-yellow-500 text-sm  flex gap-1 ">
+                  <img src="/imgs/star-card.svg" alt="" srcset=""> 
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card-gray.svg" alt="" srcset="">
+                 </span>
+                <span class="text-xs text-gray-400 ">(4.5)</span>
+            </div>
+            <p class="font-bold text-lg mb-4 px-4">250.00 د.ك</p>
+            
+            <div class="flex gap-2 mb-4 px-4">
+                <button class="flex-grow-[3] bg-white border border-gray-300 hover:bg-gray-50 py-2 rounded flex items-center justify-center gap-2">
+                    <span><img src="/imgs/cart-card.svg" alt="" srcset=""></span> أضف للسلة
+                </button>
+                  <button class="flex-1 bg-white border border-gray-300 hover:bg-gray-200 text-gray-600 py-2 rounded flex items-center justify-center">
+                    <img src="/imgs/love-card.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+        <div class="bg-white  rounded-lg shadow-sm border border-gray-100">
+            <!-- <span class="bg-purple-700 text-white px-3 py-1 text-xs rounded">جديد</span> -->
+            <img src="/imgs/device.png" alt="جهاز تابلت" class="w-full  h-48 object-cover  rounded">
+            <p class="text-sm text-[#391462] my-2 px-4">اجهزه</p>
+            <h3 class="font-bold text-lg px-4">جهاز تابلت لوحي</h3>
+            <p class="text-sm text-gray-500 px-4">تابلت</p>
+            <div class="flex items-center gap-2 my-2 px-4">
+                <span class="text-yellow-500 text-sm  flex gap-1 ">
+                  <img src="/imgs/star-card.svg" alt="" srcset=""> 
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card.svg" alt="" srcset="">
+                  <img src="/imgs/star-card-gray.svg" alt="" srcset="">
+                 </span>
+                <span class="text-xs text-gray-400 ">(4.5)</span>
+            </div>
+            <p class="font-bold text-lg mb-4 px-4">250.00 د.ك</p>
+            
+            <div class="flex gap-2 mb-4 px-4">
+                <button class="flex-grow-[3] bg-white border border-gray-300 hover:bg-gray-50 py-2 rounded flex items-center justify-center gap-2">
+                    <span><img src="/imgs/cart-card.svg" alt="" srcset=""></span> أضف للسلة
+                </button>
+                  <button class="flex-1 bg-white border border-gray-300 hover:bg-gray-200 text-gray-600 py-2 rounded flex items-center justify-center">
+                    <img src="/imgs/love-card.svg" alt="" srcset="">
+                </button>
+            </div>
+        </div>
+
+        </div>
+        <div class="flex justify-center mt-8 mb-4">
+    <button class="border border-[#391462] text-[#391462] px-10 py-2 rounded-lg hover:bg-purple-50 transition-colors">
+        عرض المزيد
+    </button>
+</div>
+</main>
+</div>
+<script>
+    const toggleBtn = document.getElementById('toggleFilters');
+    const sidebar = document.getElementById('filterSidebar');
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('hidden');
+    });
+</script>
+</body>
+</html>
