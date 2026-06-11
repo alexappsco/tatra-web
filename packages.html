@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الصفحة الرئيسية</title>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
   <style>
     body { font-family: 'Almarai', sans-serif; }
     :root { --main: #391462; }
@@ -102,13 +102,37 @@
 
   </div>
 </header>
-<div class="w-full bg-[#391462] py-3 px-4 md:px-10 flex justify-start gap-6 text-white text-sm font-medium z-20">
-      <a href="#" class="hover:underline">مترجمات ▾</a>
-      <a href="#" class="hover:underline">اداره اعمال ▾</a>
-      <a href="#" class="hover:underline">رعب ▾</a>
-      <a href="#" class="hover:underline">سياسه ▾</a>
-      <a href="#" class="hover:underline">رومانسيه ▾</a>
-    </div>
+<div class="w-full bg-[#391462] py-3">
+ <div class="overflow-x-auto custom-scroll">
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-16 flex items-center gap-6 text-white text-sm font-medium whitespace-nowrap min-w-max">
+    <a href="#" class="flex items-center gap-1 hover:underline">
+      مترجمات
+      <img src="/imgs/row-down-menu.svg" alt="">
+    </a>
+
+    <a href="#" class="flex items-center gap-1 hover:underline">
+      اداره اعمال
+      <img src="/imgs/row-down-menu.svg" alt="">
+    </a>
+
+    <a href="#" class="flex items-center gap-1 hover:underline">
+      رعب
+      <img src="/imgs/row-down-menu.svg" alt="">
+    </a>
+
+    <a href="#" class="flex items-center gap-1 hover:underline">
+      سياسه
+      <img src="/imgs/row-down-menu.svg" alt="">
+    </a>
+
+    <a href="#" class="flex items-center gap-1 hover:underline">
+      رومانسيه
+      <img src="/imgs/row-down-menu.svg" alt="">
+    </a>
+
+  </div>
+</div>
+</div>
     <header
   class="h-12 bg-white border border-gray-200 rounded-md px-6 flex items-center justify-start container mx-auto p-6 my-4 "
 >
@@ -362,7 +386,7 @@
     </div>
 
 </section>
-<footer dir="rtl" class="bg-[#f8f8f8] border-t border-gray-200">
+<footer dir="rtl" class="bg-[#f8f8f8] border-t border-gray-200 mt-20">
 
     <!-- Newsletter -->
     <div class="border-b border-gray-200">
@@ -455,7 +479,7 @@
 
     <ul class="space-y-2 text-sm text-gray-500">
         <li>
-            <a href="#" class="flex items-center gap-2">
+            <a href="profile.html" class="flex items-center gap-2">
                 <img src="imgs/arows.svg" alt="" class="">
                 <span>حسابي</span>
             </a>
@@ -495,7 +519,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="flex items-center gap-2">
+            <a href="termsandConditions.html" class="flex items-center gap-2">
                 <img src="imgs/arows.svg" alt="" class="">
                 <span>سياسة الخصوصية</span>
             </a>
@@ -510,6 +534,12 @@
             <a href="#" class="flex items-center gap-2">
                 <img src="imgs/arows.svg" alt="" class="">
                 <span>الدعم الفني</span>
+            </a>
+        </li>
+        <li>
+            <a href="devices.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>أجهزتي</span>
             </a>
         </li>
     </ul>
@@ -610,7 +640,7 @@
         </div>
     </div>
 </div>
-
+<script src="js/main.js"></script>
 </footer>
 </body>
 </html>

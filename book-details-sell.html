@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الصفحة الرئيسية</title>
+  <title> تفاصيل الكتاب</title>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -58,7 +58,8 @@
   <div class="container mx-auto flex flex-wrap items-center justify-between gap-4">
 
     <!-- Logo -->
-    <img src="./imgs/logo.png" class="w-28 md:w-32 h-auto object-contain" />
+     <a href="index.html"><img src="./imgs/logo.png" class="w-28 md:w-32 h-auto object-contain" /></a>
+    
 
     <!-- Search -->
     <div class="w-full md:flex-1 md:max-w-lg order-3 md:order-none">
@@ -75,7 +76,7 @@
     <div class="flex items-center gap-4 md:gap-6">
 
       <!-- login -->
-      <div class="flex items-center gap-2">
+      <div style="cursor: pointer;" onclick="window.location.href='sign-in.html'" class="flex items-center gap-2">
         <span class="text-xl md:text-2xl text-gray-400"><img src="imgs/account.svg" class="h-6 w-6" /></span>
         <div class="text-sm text-right hidden sm:block">
           <p class="text-xs text-gray-400">مرحباً بك</p>
@@ -84,7 +85,7 @@
       </div>
 
       <!-- cart -->
-      <div class="flex items-center gap-2">
+      <div style="cursor: pointer;" onclick="window.location.href='cart.html'" class="flex items-center gap-2">
         <div class="relative">
           <span class="text-xl md:text-2xl"><img src="imgs/cart.svg" class="h-6 w-6" /></span>
           <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">
@@ -92,7 +93,7 @@
           </span>
         </div>
 
-        <div class="text-sm text-right hidden sm:block">
+        <div  class="text-sm text-right hidden sm:block">
           <p class="text-xs text-gray-400">سلة المشتريات</p>
           <p class="font-bold text-[var(--main)]">1,200 ر.س</p>
         </div>
@@ -102,13 +103,91 @@
 
   </div>
 </header>
-<div class="w-full bg-[#391462] py-3 px-4 md:px-10 flex justify-start gap-6 text-white text-sm font-medium z-20">
-      <a href="#" class="hover:underline">مترجمات ▾</a>
-      <a href="#" class="hover:underline">اداره اعمال ▾</a>
-      <a href="#" class="hover:underline">رعب ▾</a>
-      <a href="#" class="hover:underline">سياسه ▾</a>
-      <a href="#" class="hover:underline">رومانسيه ▾</a>
+<div class="w-full bg-[#391462] py-3 relative z-50">
+  <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-16 flex items-center gap-6 text-white text-sm font-medium whitespace-nowrap overflow-x-auto">
+
+    <!-- ITEM -->
+    <div class="relative menu-item shrink-0">
+      <button class="toggle-btn flex items-center gap-1">
+        مترجمات
+        <img src="imgs/row-down-menu.svg" alt="">
+      </button>
+
+      <div class="submenu hidden fixed w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-[99999] overflow-hidden">
+        <div class="absolute -top-2 right-6 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100"></div>
+
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">مترجمات عربية</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">مترجمات أجنبية</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">مترجمات حديثة</a>
+      </div>
     </div>
+
+    <!-- ITEM -->
+    <div class="relative menu-item shrink-0">
+      <button class="toggle-btn flex items-center gap-1">
+        اداره اعمال
+        <img src="imgs/row-down-menu.svg" alt="">
+      </button>
+
+      <div class="submenu hidden fixed w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-[99999] overflow-hidden">
+        <div class="absolute -top-2 right-6 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100"></div>
+
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">استراتيجيات</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">تسويق</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">إدارة فرق</a>
+      </div>
+    </div>
+
+    <!-- ITEM -->
+    <div class="relative menu-item shrink-0">
+      <button class="toggle-btn flex items-center gap-1">
+        رعب
+        <img src="imgs/row-down-menu.svg" alt="">
+      </button>
+
+      <div class="submenu hidden fixed w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-[99999] overflow-hidden">
+        <div class="absolute -top-2 right-6 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100"></div>
+
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">قصص رعب</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">أفلام رعب</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">حوادث حقيقية</a>
+      </div>
+    </div>
+
+    <!-- ITEM -->
+    <div class="relative menu-item shrink-0">
+      <button class="toggle-btn flex items-center gap-1">
+        سياسه
+        <img src="imgs/row-down-menu.svg" alt="">
+      </button>
+
+      <div class="submenu hidden fixed w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-[99999] overflow-hidden">
+        <div class="absolute -top-2 right-6 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100"></div>
+
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">أخبار محلية</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">تحليلات</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">اقتصاد</a>
+      </div>
+    </div>
+
+    <!-- ITEM -->
+    <div class="relative menu-item shrink-0">
+      <button class="toggle-btn flex items-center gap-1">
+        رومانسيه
+        <img src="imgs/row-down-menu.svg" alt="">
+      </button>
+
+      <div class="submenu hidden fixed w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 z-[99999] overflow-hidden">
+        <div class="absolute -top-2 right-6 w-4 h-4 bg-white rotate-45 border-l border-t border-gray-100"></div>
+
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">قصص حب</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">روايات</a>
+        <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">دراما</a>
+      </div>
+    </div>
+
+  </div>
+</div>
     <header
   class="h-12 bg-white border border-gray-200 rounded-md px-6 flex items-center justify-start container mx-auto p-6 my-4 "
 >
@@ -120,17 +199,21 @@
      <img src="./imgs/row.svg" class=" " alt="قلب" />
     </div>
     <span class="font-medium text-gray-600">
-     الحساب الشخصي
+      الكتب
+    </span>
+     <img src="./imgs/row.svg" class=" " alt="قلب" />
+     <span class="font-medium text-gray-600">
+     زائر الليل
     </span>
   </div>
 </header>
 
     <main class="container mx-auto px-4 py-8">
-  <div class="grid grid-cols-1 md:grid-cols-[70%,20%] gap-8">
+  <div class="grid grid-cols-1 lg:grid-cols-[70%,25%] gap-8">
     
-    <div class="space-y-8">
-      
-      <div class="grid grid-cols-[250px,1fr] gap-8">
+    <!-- 1- Book image and details -->
+    <div class="order-1">
+      <div class="grid grid-cols-1 md:grid-cols-[250px,1fr] gap-8">
   
   <div class="flex flex-col gap-4">
     <img src="imgs/book1.png" alt="غلاف الكتاب" class="w-full h-auto rounded-lg shadow-md">
@@ -138,7 +221,7 @@
    <button class="flex items-center justify-center w-full rounded-lg overflow-hidden font-bold text-white transition hover:opacity-90">
  
   <div class="flex-grow bg-[#391462] py-4">
-    شراء
+   شراء
   </div>
    <div class="bg-[#200043] p-4">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
@@ -184,122 +267,10 @@
     </div>
   </div>
 </div>
-
-      <section class="pt-14">
-  <!-- العنوان والزر -->
-  <div class="flex justify-between items-center mb-6">
-    <div>
-      <h2 class="text-2xl text-[#391462] font-bold">آراء ومراجعات القراء</h2>
-      <p class="text-[#391462] text-sm">أكثر من 50,000 مراجعة حقيقية</p>
-    </div>
-    <button class=" px-6 py-2 rounded-2xl bg-[#3914620D] text-[#391462] text-sm font-bold">
-      كل المراجعات
-    </button>
-  </div>
-
-  <!-- حاوية المراجعات (Grid) -->
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    
-    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>  
-        <div>
-          <h4 class="font-bold text-[#391462]">سارة أحمد</h4>
-          <p class="text-xs  text-[#391462]">قارئ متميز - 14 مراجعة</p>
-        </div>
-      </div>
-      
-      <div class="text-yellow-400 mb-2">★★★★★</div>
-      
-      <div class="bg-gray-50 p-3 rounded-lg mb-4">
-        <p class="text-sm text-[#391462]">عن كتاب: القتل للمبتدئين</p>
-        <p class="text-sm font-bold text-orange-600">تأليف: أحمد مراد</p>
-      </div>
-      
-      <p class="text-[#391462] mb-2">
-        الرواية تأخذك في عالم مختلف تماماً. لم أتوقع هذه الحبكة الدرامية. أحمد مراد دائماً يبهرنا بقدرته على دمج الواقع بالخيال العلمي.
-      </p>
-      
-      <p class="text-xs text-gray-400">أعجب 142 قارئاً بهذه المراجعة</p>
     </div>
 
-    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>  
-        <div>
-          <h4 class="font-bold text-[#391462]">ابو العيس</h4>
-          <p class="text-xs  text-[#391462]">قارئ متميز - 14 مراجعة</p>
-        </div>
-      </div>
-      
-      <div class="text-yellow-400 mb-2">★★★★★</div>
-      
-      <div class="bg-gray-50 p-3 rounded-lg mb-4">
-        <p class="text-sm text-[#391462]">عن كتاب: القتل للمبتدئين</p>
-        <p class="text-sm font-bold text-orange-600">تأليف: أحمد مراد</p>
-      </div>
-      
-      <p class="text-[#391462] mb-2">
-        الرواية تأخذك في عالم مختلف تماماً. لم أتوقع هذه الحبكة الدرامية. أحمد مراد دائماً يبهرنا بقدرته على دمج الواقع بالخيال العلمي.
-      </p>
-      
-      <p class="text-xs text-gray-400">أعجب 142 قارئاً بهذه المراجعة</p>
-    </div>
-    
-  </div>
-</section>
-
-      <section class="bg-[#F9F7FD] p-8 rounded-2xl my-12">
-  <!-- العنوان والوصف -->
-  <div class="mb-6">
-    <h2 class="text-2xl font-bold text-[#391462]">أضف مراجعتك للكتاب</h2>
-    <p class="text-gray-500 mt-1">رأيك يساعد القراء الآخرين على اتخاذ القرار الصحيح</p>
-  </div>
-
-  <!-- التقييم -->
-  <div class="mb-6">
-    <p class="font-bold text-[#391462] mb-2">تقييمك العام:</p>
-    <div class="flex text-4xl text-orange-500">
-      ★★★★<span class="text-gray-300">★</span>
-    </div>
-  </div>
-
-  <!-- حقل النص -->
-  <div class="mb-6">
-    <label class="block font-bold text-[#391462] mb-2">اكتب مراجعتك:</label>
-   <textarea
-  class="w-full h-40 p-4 rounded-xl border border-gray-200 bg-[#FBF9F6] text-[#391462] placeholder:text-gray-400 resize-none focus:outline-none"
-  placeholder="ما الذي أعجبك أو لم يعجبك في هذا الكتاب؟">
-</textarea>
-  </div>
-
-  <!-- زر النشر والبيانات -->
- <div class="flex items-center gap-6">
-
-  <!-- معلومات المستخدم -->
-  <div class="flex items-center gap-3">
-    <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-    <div class="text-right">
-      <p class="font-bold text-gray-900">إبراهيم محمد</p>
-      <p class="text-xs text-gray-500">ستظهر مراجعتك باسمك الحقيقي</p>
-    </div>
-  </div>
-
-  <!-- الأزرار -->
-  <div class="flex items-center gap-6 ms-auto">
-    <button class="text-gray-600 font-bold hover:text-gray-900">
-      إلغاء
-    </button>
-     <button class="bg-[#391462] text-white px-6 py-3 rounded-3xl font-bold hover:bg-indigo-900 transition">
-      نشر المراجعة
-    </button>
-  </div>
-
-</div>
-</section>
-    </div>
-
-    <aside class="space-y-8">
+    <!-- 2- Sides of the two tables -->
+    <aside class="space-y-8 order-2 lg:order-none lg:col-start-2 lg:row-start-1 lg:row-span-3">
   <!-- جدول تفاصيل الكتاب -->
  <div class="border rounded-lg overflow-hidden w-full max-w-2xl mx-auto">
   <table class="text-sm w-full table-fixed">
@@ -399,8 +370,8 @@
         <td class="p-3 font-semibold text-gray-700 bg-[#F1F5F9] border border-[#E2E8F0]">
           رابط مختصر
         </td>
-        <td class="p-3 text-right bg-[#F8FAFC]">
-          🔗
+        <td class="p-3 text-right">
+          <img src="/imgs/link.svg" alt="">
         </td>
       </tr>
 
@@ -409,7 +380,11 @@
           مشاركة
         </td>
         <td class="p-3 text-right bg-[#F8FAFC]  flex gap-2">
-          📱 🐦 💬
+                    <img src="/imgs/fbook.svg" />
+                    <img src="/imgs/tiwitter.svg" />
+                    <img src="/imgs/whatsapp.svg" />
+                    <img src="/imgs/messanger.svg" />
+
         </td>
       </tr>
 
@@ -468,6 +443,130 @@
   </button>
 </div>
 </aside>
+
+    <!-- 3- Reader opinions and reviews -->
+    <div class="order-3">
+      <section class="pt-14">
+  <!-- العنوان والزر -->
+  <div class="flex justify-between items-center mb-6">
+    <div>
+      <h2 class="text-2xl text-[#391462] font-bold">آراء ومراجعات القراء</h2>
+      <p class="text-[#391462] text-sm">أكثر من 50,000 مراجعة حقيقية</p>
+    </div>
+    <button class=" px-6 py-2 rounded-2xl bg-[#3914620D] text-[#391462] text-sm font-bold">
+      كل المراجعات
+    </button>
+  </div>
+
+  <!-- حاوية المراجعات (Grid) -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>  
+        <div>
+          <h4 class="font-bold text-[#391462]">سارة أحمد</h4>
+          <p class="text-xs  text-[#391462]">قارئ متميز - 14 مراجعة</p>
+        </div>
+      </div>
+      
+      <div class="text-yellow-400 mb-2">★★★★★</div>
+      
+      <div class="bg-gray-50 p-3 rounded-lg mb-4">
+        <p class="text-sm text-[#391462]">عن كتاب: القتل للمبتدئين</p>
+        <p class="text-sm font-bold text-orange-600">تأليف: أحمد مراد</p>
+      </div>
+      
+      <p class="text-[#391462] mb-2">
+        الرواية تأخذك في عالم مختلف تماماً. لم أتوقع هذه الحبكة الدرامية. أحمد مراد دائماً يبهرنا بقدرته على دمج الواقع بالخيال العلمي.
+      </p>
+      
+      <p class="text-xs text-gray-400">أعجب 142 قارئاً بهذه المراجعة</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-12 h-12 bg-gray-200 rounded-full"></div>  
+        <div>
+          <h4 class="font-bold text-[#391462]">ابو العيس</h4>
+          <p class="text-xs  text-[#391462]">قارئ متميز - 14 مراجعة</p>
+        </div>
+      </div>
+      
+      <div class="text-yellow-400 mb-2">★★★★★</div>
+      
+      <div class="bg-gray-50 p-3 rounded-lg mb-4">
+        <p class="text-sm text-[#391462]">عن كتاب: القتل للمبتدئين</p>
+        <p class="text-sm font-bold text-orange-600">تأليف: أحمد مراد</p>
+      </div>
+      
+      <p class="text-[#391462] mb-2">
+        الرواية تأخذك في عالم مختلف تماماً. لم أتوقع هذه الحبكة الدرامية. أحمد مراد دائماً يبهرنا بقدرته على دمج الواقع بالخيال العلمي.
+      </p>
+      
+      <p class="text-xs text-gray-400">أعجب 142 قارئاً بهذه المراجعة</p>
+    </div>
+    
+  </div>
+</section>
+    </div>
+
+    <!-- 4- Add your review of the book -->
+    <div class="order-4">
+      <section class="bg-[#F9F7FD] p-8 rounded-2xl my-12">
+  <!-- العنوان والوصف -->
+  <div class="mb-6">
+    <h2 class="text-2xl font-bold text-[#391462]">أضف مراجعتك للكتاب</h2>
+    <p class="text-gray-500 mt-1">رأيك يساعد القراء الآخرين على اتخاذ القرار الصحيح</p>
+  </div>
+
+  <!-- التقييم -->
+  <div class="mb-6">
+    <p class="font-bold text-[#391462] mb-2">تقييمك العام:</p>
+    <div class="flex text-4xl text-orange-500">
+      ★★★★<span class="text-gray-300">★</span>
+    </div>
+  </div>
+
+  <!-- حقل النص -->
+  <div class="mb-6">
+    <label class="block font-bold text-[#391462] mb-2">اكتب مراجعتك:</label>
+   <textarea
+  class="w-full h-40 p-4 rounded-xl border border-gray-200 bg-[#FBF9F6] text-[#391462] placeholder:text-gray-400 resize-none focus:outline-none"
+  placeholder="ما الذي أعجبك أو لم يعجبك في هذا الكتاب؟">
+</textarea>
+  </div>
+
+  <!-- زر النشر والبيانات -->
+ <div class="flex flex-col gap-4 md:flex-row md:items-center">
+
+  <!-- معلومات المستخدم -->
+  <div class="flex items-center gap-3">
+    <div class="w-12 h-12 bg-gray-200 rounded-full flex-shrink-0"></div>
+
+    <div class="text-right">
+      <p class="font-bold text-gray-900">إبراهيم محمد</p>
+      <p class="text-xs text-gray-500">
+        ستظهر مراجعتك باسمك الحقيقي
+      </p>
+    </div>
+  </div>
+
+  <!-- الأزرار -->
+  <div class="flex items-center gap-4 md:ms-auto">
+    <button
+      class="bg-[#391462] text-white px-6 py-3 rounded-3xl font-bold hover:bg-indigo-900 transition whitespace-nowrap"
+    >
+      نشر المراجعة
+    </button>
+    <button class="text-gray-600 font-bold hover:text-gray-900 whitespace-nowrap">
+      إلغاء
+    </button>
+  </div>
+
+</div>
+</section>
+    </div>
 
   </div>
 
@@ -562,6 +661,261 @@
     </div>
   </section>
 </main>
+<footer dir="rtl" class="bg-[#f8f8f8] border-t border-gray-200 mt-20">
 
+    <!-- Newsletter -->
+    <div class="border-b border-gray-200">
+        <div class="container mx-auto px-4 py-6">
+
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 items-center">
+
+                <!-- Text -->
+                <div class="flex items-center gap-4 justify-center xl:justify-start text-center xl:text-right">
+
+                    <div
+                        class="w-12 h-12 rounded-full bg-[#f3ebfb] flex items-center justify-center shrink-0">
+                        <img src="./imgs/email.svg"
+                             alt=""
+                             class="w-6 h-6">
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-gray-800 text-lg">
+                            الاشتراك في النشرة البريدية
+                        </h3>
+
+                        <p class="text-sm text-gray-500">
+                            انضم الآن واحصل على خصم 10% على مشترياتك التالية
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Form -->
+                <div class="w-full">
+
+                    <div class="flex w-full max-w-xl mx-auto">
+
+                        <input
+                            type="email"
+                            placeholder="ادخل البريد الإلكتروني"
+                            class="flex-1 min-w-0 h-11 px-4 border border-gray-300 rounded-r-md focus:outline-none focus:ring-2 focus:ring-[#391462]">
+
+                        <button
+                            class="bg-[#391462] text-white px-6 h-11 shrink-0 rounded-l-md whitespace-nowrap">
+                            اشتراك
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Apps -->
+                <div class="flex items-center justify-center xl:justify-end gap-2 flex-wrap">
+
+                    <img
+                        src="./imgs/apple-store.png"
+                        class="h-10 w-auto object-contain"
+                        alt="App Store">
+
+                   <img
+                        src="./imgs/apple-store.png"
+                        class="h-10 w-auto object-contain"
+                        alt="App Store">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="container mx-auto px-4 py-10">
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+            <!-- About -->
+            <div class="col-span-2 md:col-span-3 lg:col-span-1">
+                <h4 class="font-bold text-gray-800 mb-4">
+                    معلومات عنا
+                </h4>
+
+                <p class="text-sm text-gray-500 leading-7">
+                    نص تعريفي قصير عن المتجر والخدمات المقدمة للعملاء.
+                </p>
+            </div>
+
+           <!-- Account -->
+<div>
+    <h4 class="font-bold text-gray-800 mb-4">
+        حسابي
+    </h4>
+
+    <ul class="space-y-2 text-sm text-gray-500">
+        <li>
+            <a href="profile.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>حسابي</span>
+            </a>
+        </li>
+        <li>
+            <a href="/book-request.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>طلباتي</span>
+            </a>
+        </li>
+        <li>
+            <a href="/cart.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>سلة المشتريات</span>
+            </a>
+        </li>
+        <li>
+            <a href="/favourit.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>المفضلة</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Links -->
+<div>
+    <h4 class="font-bold text-gray-800 mb-4">
+        روابط مهمة
+    </h4>
+
+    <ul class="space-y-2 text-sm text-gray-500">
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>من نحن</span>
+            </a>
+        </li>
+        <li>
+            <a href="termsandConditions.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>سياسة الخصوصية</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>الشروط والأحكام</span>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>الدعم الفني</span>
+            </a>
+        </li>
+        <li>
+            <a href="devices.html" class="flex items-center gap-2">
+                <img src="imgs/arows.svg" alt="" class="">
+                <span>أجهزتي</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- Contact -->
+<div>
+    <h4 class="font-bold text-gray-800 mb-4">
+        تواصل معنا
+    </h4>
+
+    <ul class="space-y-2 text-sm text-gray-500 break-all">
+        <li class="flex items-center gap-2">
+            <img src="imgs/arows.svg" alt="" class="">
+            <span>واتساب : 098765456789</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <img src="imgs/arows.svg" alt="" class="">
+            <span>موبايل : 9876545678</span>
+        </li>
+        <li class="flex items-center gap-2">
+            <img src="imgs/arows.svg" alt="" class="">
+            <span>البريد : info@example.com</span>
+        </li>
+    </ul>
+</div>
+
+            <!-- Social -->
+            <div>
+                <h4 class="font-bold text-gray-800 mb-4">
+                    تابعنا
+                </h4>
+
+                <div class="flex flex-wrap gap-3">
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/snap.svg"
+                             class="w-4 h-4 object-contain">
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/instagram.svg"
+                             class="w-4 h-4 object-contain">
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/twitter.svg"
+                             class="w-4 h-4 object-contain">
+                    </a>
+
+                    <a href="#"
+                       class="w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center hover:bg-[#391462] transition">
+                        <img src="./imgs/facebook.svg"
+                             class="w-3 h-3 object-contain">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+   <!-- Bottom -->
+<div class="bg-[#391462] text-white">
+    <div class="container mx-auto px-4 py-3">
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-3 text-xs sm:text-sm">
+
+            <!-- Right / Copyright -->
+            <div class="text-center md:text-right whitespace-nowrap">
+                الحقوق محفوظة لمصطفى الحسيني
+            </div>
+
+            <!-- Center / Tax + Payments -->
+            <div class="flex items-center justify-center flex-nowrap gap-1 sm:gap-2">
+
+                <div class="flex items-center gap-1 whitespace-nowrap">
+                    <img src="./imgs/value(2).jpg"
+                         class="w-4 h-4 sm:w-6 sm:h-6 object-contain">
+
+                    <span>
+                        الرقم الضريبي : 546987552
+                    </span>
+                </div>
+
+                <img src="./imgs/mada.svg" class="h-4 sm:h-6 w-auto object-contain">
+                <img src="./imgs/paypal.svg" class="h-4 sm:h-6 w-auto object-contain">
+                <img src="./imgs/master.svg" class="h-4 sm:h-6 w-auto object-contain">
+                <img src="./imgs/visa.svg" class="h-4 sm:h-6 w-auto object-contain">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>
+</footer>
 </body>
 </html>

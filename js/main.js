@@ -28,3 +28,36 @@ window.addEventListener('resize', () => {
     document.body.classList.remove('overflow-hidden');
   }
 });
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    const parent = this.closest('.menu-item');
+    const submenu = parent.querySelector('.submenu');
+
+    // اقفل الباقي
+    document.querySelectorAll('.submenu').forEach(m => {
+      m.classList.add('hidden');
+      m.style.position = '';
+      m.style.top = '';
+      m.style.left = '';
+    });
+
+    // احصل على مكان الزر
+    const rect = this.getBoundingClientRect();
+
+    submenu.classList.remove('hidden');
+
+    submenu.style.position = 'fixed';
+    submenu.style.top = rect.bottom + 'px';
+    submenu.style.right = (window.innerWidth - rect.right) + 'px';
+  });
+});
+
+// إغلاق عند الضغط خارج
+document.addEventListener('click', () => {
+  document.querySelectorAll('.submenu').forEach(m => {
+    m.classList.add('hidden');
+    m.style.position = '';
+  });
+});
