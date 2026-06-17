@@ -3,29 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اطلب كتابك الآن</title>
+  <title>الدعم الفني</title>
   <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css" />
-
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
-      font-family: 'Almarai', sans-serif;
-    }
-
-    :root {
-      --main: #391462;
-    }
-
-    .main-btn {
-      background: var(--main);
-    }
-
-    .main-btn:hover {
-      background: #2c0f4d;
-    }
+    body { font-family: 'Almarai', sans-serif; }
+    :root { --main: #391462; }
   </style>
 </head>
-
 <body class="bg-gray-50">
 
   <div class="bg-gray-50 border-b border-gray-100 py-2 text-xs text-gray-500">
@@ -118,7 +103,7 @@
 
   </div>
 </header>
-<div class="w-full bg-[#391462] py-3 relative z-50">
+<div class="w-full bg-[#391462] py-3 relative z-20 lg:z-50">
   <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-16 flex items-center gap-6 text-white text-sm font-medium whitespace-nowrap overflow-x-auto">
 
     <!-- ITEM -->
@@ -215,159 +200,56 @@
      <img src="./imgs/row.svg" class=" " alt="قلب" />
     </div>
     <span class="font-medium text-gray-600">
-      كتاب ورقي
+     الدعم الفني
     </span>
-
-   
-
   </div>
 </header>
-  <section class="min-h-screen p-4 md:p-6 lg:p-8">
-    <div class="max-w-7xl mx-auto">
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
-        <!-- الفورم -->
-        <div class="flex items-center justify-center order-2 lg:order-1">
-
-          <div  class="w-full max-w-xl space-y-6">
-
-            <!-- اسم المستخدم -->
-            <div>
-              <label class="block text-sm font-bold text-gray-700 mb-2">
-                اسم المستخدم
-              </label>
-
-              <input
-                type="text"
-                placeholder="مبارك سالم آل سلمان"
-                class="w-full h-14 px-4 rounded-md bg-[#FAFAFA] border border-gray-200 focus:border-purple-700 focus:ring-2 focus:ring-purple-200 outline-none transition"
-              >
-            </div>
-
-            <!-- البريد الإلكتروني -->
-            <div>
-              <label class="block text-sm font-bold text-gray-700 mb-2">
-                البريد الإلكتروني
-              </label>
-
-              <input
-                type="email"
-                placeholder="mubarksalem@gmail.com"
-                class="w-full h-14 px-4 rounded-md bg-[#FAFAFA] border border-gray-200 focus:border-purple-700 focus:ring-2 focus:ring-purple-200 outline-none transition"
-              >
-            </div>
-
-            <!-- رقم الجوال -->
-        <div>
-  <label class="block text-sm font-bold text-gray-700 mb-2">
-    رقم الجوال
-  </label>
-
-  <div
-    class="group flex items-center overflow-hidden rounded-md border border-gray-200 bg-[#FAFAFA]
-           transition-all duration-200
-           hover:border-purple-700
-           focus-within:border-purple-700
-           focus-within:ring-2 focus-within:ring-purple-200"
-  >
-
-    <input
-    dir="rtl" 
-      type="tel"
-      placeholder="0512345451"
-      class="flex-1 h-14 px-4 bg-transparent border-0 outline-none focus:ring-0"
-    >
-
-    <div
-      class="flex h-14 min-w-[110px] items-center justify-center gap-2
-             border-r border-gray-200 px-3
-             transition-colors duration-200
-             group-hover:border-purple-700
-             group-focus-within:border-purple-700"
-    >
-      <img src="imgs/sauid.svg" alt="SA" class="h-5 w-5 object-contain" />
-      <span class="text-sm font-semibold text-gray-700">+966</span>
-    </div>
-
-  </div>
-</div>
-
-            <!-- المدينة -->
-            <div>
-              <label class="block text-sm font-bold text-gray-700 mb-2">
-                العنوان
-              </label>
-
-              <div class="relative">
-
-                <select
-                  class="w-full h-14 px-4 rounded-md bg-[#FAFAFA] border border-gray-200 appearance-none focus:border-purple-700 focus:ring-2 focus:ring-purple-200 outline-none transition"
-                >
-                  <option selected>الرياض</option>
-                  <option>جدة</option>
-                  <option>الدمام</option>
-                  <option>مكة المكرمة</option>
-                </select>
-
-                <svg
-                  class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-
-              </div>
-            </div>
-
-            <!-- الحي -->
-            <div>
-              <label class="block text-sm font-bold text-gray-700 mb-2">
-               اسم الكتاب
-              </label>
-
-              <input
-                type="text"
-                placeholder="القتل للمبتدئين"
-                class="w-full h-14 px-4 rounded-md bg-[#FAFAFA] border border-gray-200 focus:border-purple-700 focus:ring-2 focus:ring-purple-200 outline-none transition"
-              >
-            </div>
-
-            <!-- الزر -->
-            <div class="pt-8 text-center">
-              <button
-              onclick="window.location='book-request.html'"
-                style="cursor: pointer;"
-                class="mx-auto block w-full max-w-xs h-10 rounded-md text-white font-bold text-base bg-[#391462] hover:bg-[#2d104d] transition"
-              >
-                اطلب كتابك الآن
-              </button>
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- الصورة -->
-        <div class="order-1 lg:order-2">
-          <img
-            src="imgs/book.jpg"
-            alt="كتاب"
-            class="w-full h-[450px] md:h-[600px] lg:h-[760px] object-cover rounded-md"
-          >
-        </div>
-
+<div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 w-full max-w-xl mx-auto my-10">
+    
+    <h2 class="text-2xl font-bold text-center text-[#1e1b4b] mb-8">تواصل معنا</h2>
+    
+    <form class="space-y-6" onsubmit="event.preventDefault();">
+      
+      <div>
+        <label for="subject-name" class="block text-sm font-semibold text-[#1e1b4b] mb-2 text-right">اسم الموضوع</label>
+        <input 
+          type="text" 
+          id="subject-name" 
+          placeholder="اي اسم" 
+          class="w-full bg-[#f8fafc] text-right border-0 rounded-xl py-4 px-4 text-gray-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6366f1] transition-all text-sm"
+        >
       </div>
 
-    </div>
-  </section>
+      <div>
+        <label for="email" class="block text-sm font-semibold text-[#1e1b4b] mb-2 text-right">البريد الإلكتروني</label>
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="mubarksalem@gmail.com" 
+          class="w-full bg-[#f8fafc] text-left border-0 rounded-xl py-4 px-4 text-gray-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6366f1] transition-all text-sm"
+          dir="ltr"
+        >
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-semibold text-[#1e1b4b] mb-2 text-right">الموضوع</label>
+        <textarea 
+          id="message" 
+          rows="5" 
+          placeholder="اي كلام" 
+          class="w-full bg-[#f8fafc] text-right border-0 rounded-xl py-4 px-4 text-gray-700 placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-[#6366f1] transition-all text-sm resize-none"
+        ></textarea>
+      </div>
+
+      <button 
+        type="submit" 
+        class="w-full bg-[#391462] hover:bg-[#4c1d95] text-white font-semibold py-4 rounded-xl transition-colors duration-200 text-center mt-4"
+      >
+        ارسل الان
+      </button>
+
+    </form>
+  </div>
 <footer dir="rtl" class="bg-[#f8f8f8] border-t border-gray-200 mt-20">
 
     <!-- Newsletter -->
@@ -624,5 +506,5 @@
 </div>
 <script src="js/main.js"></script>
 </footer>
-</body>
-</html>
+    </body>
+    </html>
